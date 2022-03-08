@@ -1,8 +1,6 @@
-# Hardhat Project with TypeScript
+# On-Chain DAO Tutorial
 
-This project demonstrates a basic Hardhat use case using typescript. It comes with a sample contract and a test for that contract. It is configured to work with `hardhat-deploy` plugin for intuitive contract deployment. And, `hardhat-etherscan` for contract verification. Beyond those the project also comes with example script and tasks.
-
-Try running some of the following tasks:
+This project follows Patrick's awesome on-chain DAO tutorial. YouTube video here: https://www.youtube.com/watch?v=AhJtmUqhAqg
 
 Start with installing dependencies
 

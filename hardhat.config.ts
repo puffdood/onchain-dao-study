@@ -3,10 +3,14 @@ import { HardhatRuntimeEnvironment, HttpNetworkUserConfig } from 'hardhat/types'
 
 import '@nomiclabs/hardhat-waffle'
 import '@nomiclabs/hardhat-ethers'
+import '@nomiclabs/hardhat-etherscan'
+
+import '@typechain/hardhat'
+import '@typechain/ethers-v5'
+
 import 'hardhat-deploy'
 import 'hardhat-gas-reporter'
 import 'solidity-coverage'
-import '@nomiclabs/hardhat-etherscan'
 
 import fs from 'fs'
 import qrcode from 'qrcode-terminal'
@@ -47,6 +51,9 @@ const config: HardhatUserConfig = {
     },
   },
   networks: {
+    hardhat: {
+      chainId: 31337,
+    },
     localhost: {
       url: 'http://localhost:8545',
       chainId: 31337,
@@ -109,7 +116,7 @@ const config: HardhatUserConfig = {
   etherscan: {
     apiKey: process.env.ETHERSCAN_API_KEY, // <---- YOUR ETHERSCAN API KEY
   },
-  solidity: '0.8.4',
+  solidity: '0.8.8',
 }
 export default config
 
